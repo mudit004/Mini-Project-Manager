@@ -1,0 +1,96 @@
+# === Visual Studio / .NET ===
+## Build
+**/bin/
+**/obj/
+
+## Publish output
+**/publish/
+publish/
+
+## Rider / IntelliJ
+.idea/
+*.sln.iml
+
+## Visual Studio workspace & user files
+.vs/
+.vscode/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.DotSettings.user
+
+## NuGet
+packages/
+*.nupkg
+project.lock.json
+project.assets.json
+.nuget/
+*.nuget.props
+*.nuget.targets
+
+## Dotnet tools & temp
+*.dotCover
+*.dotCover.* 
+*.session
+*.pidb
+*.vsp
+*.cache
+*.stamp
+
+# === Database / runtime artifacts ===
+# Local dev DB (SQLite) and journals
+*.db
+*.db-journal
+projectmanager.db
+
+# EF / migrations / runtime files
+*.db-shm
+*.db-wal
+
+# === Logs / test results / coverage ===
+*.log
+logs/
+TestResults/
+*.trx
+coverage/
+*.coverage
+*.coveragexml
+coverage.* 
+
+# === Symbols / debug ===
+*.pdb
+*.mdb
+
+# === Generated / SDK files ===
+*.runtimeconfig.dev.json
+*.runtimeconfig.json
+*.deps.json
+
+# === IDE extras / OS files ===
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# === Resharper / Rider caches ===
+_ReSharper*/
+*.ReSharper
+.idea/
+.idea/**/workspace.xml
+
+# === Editor temp files ===
+*~ 
+*.swp
+*.swo
+
+# === Package managers / node (if frontend added later) ===
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# === Secret / local config (optional but recommended) ===
+# Ignore local dev settings that might contain secrets
+**/appsettings.Development.json
+**/secrets.json

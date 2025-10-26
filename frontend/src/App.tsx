@@ -48,7 +48,7 @@ interface Task {
 }
 
 // API Configuration
-const API_BASE_URL = "http://localhost:5293/api";
+const API_BASE_URL = "https://mini-project-manager-sujb.onrender.com/api";
 
 // Auth Context
 interface AuthContextType {

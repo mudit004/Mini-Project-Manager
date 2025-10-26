@@ -140,6 +140,27 @@ if (app.Environment.IsDevelopment())
     var context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
     await SeedDatabase(context);
 }
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    try
+    {
+        var context = services.GetRequiredService<ApplicationDbContext>();
+        
+        // This will create the database and tables if they don't exist
+        context.Database.EnsureCreated();
+        
+        // OR if you're using migrations, use this instead:
+        // context.Database.Migrate();
+        
+        Console.WriteLine("Database initialized successfully");
+    }
+    catch (Exception ex)
+    {
+        var logger = services.GetRequiredService<ILogger<Program>>();
+        logger.LogError(ex, "An error occurred while creating the database");
+    }
+}
 
 app.Run();
 

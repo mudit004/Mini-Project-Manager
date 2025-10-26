@@ -3,7 +3,7 @@
 
 A simple full-stack project management application (API + React front-end) implemented with:
 
-- Backend: .NET 7 (ASP.NET Core Web API), Entity Framework Core (SQLite), AutoMapper, JWT-based authentication
+- Backend: .NET 8 (ASP.NET Core Web API), Entity Framework Core (SQLite), AutoMapper, JWT-based authentication
 - Frontend: React + TypeScript + Vite + TailwindCSS
 
 This repository contains a small, opinionated project manager that supports:
